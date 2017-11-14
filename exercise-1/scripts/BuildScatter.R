@@ -10,7 +10,7 @@ library(ggplot2)
 #   - Label for the x axis (set a default of "X Title")
 #   - Label for the y axis (set a default of "Y Title")
 
-scatterplot <- function(dataframe, x, y, color, title = "Title", xaxis = "x axis", yaxis = "y axis") {
-  result <- ggplot(data = dataframe) + geom_point(mapping = aes(x = x, y = y), colour = color, size = 3) + 
+BuildScatter <- function(dataframe, x, y, color, title = "Title", xaxis = "x axis", yaxis = "y axis") {
+  result <- ggplot(data = dataframe) + geom_point(mapping = aes(x = x, y = y, colour = color), size = 3) 
   return (result)
 }
